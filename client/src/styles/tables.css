@@ -1,0 +1,86 @@
+/* Tables */
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: hsl(var(--card));
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.appointments-table th {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  position: relative;
+}
+
+.appointments-table th.editable {
+  cursor: pointer;
+}
+
+.appointments-table th.editable:hover {
+  background-color: hsl(var(--primary) / 0.8);
+}
+
+.appointments-table td {
+  padding: 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.appointments-table tr:hover {
+  background-color: hsl(var(--muted));
+}
+
+.appointments-table input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* Header editing */
+.header-edit-input {
+  background: transparent;
+  border: none;
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+  width: 100%;
+  outline: none;
+}
+
+.header-edit-input:focus {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  padding: 0.25rem;
+  border-radius: 2px;
+}
+
+/* Drag and Drop */
+.appointments-table th {
+  cursor: grab;
+  user-select: none;
+}
+
+.appointments-table th:active {
+  cursor: grabbing;
+}
+
+.appointments-table th.non-editable {
+  cursor: default;
+}
+
+.appointments-table th.non-editable:hover {
+  background-color: hsl(var(--primary)) !important;
+}
+
+/* Sortable headers */
+.sortable-header {
+  position: relative;
+}
+
+.sortable-header.is-dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+}

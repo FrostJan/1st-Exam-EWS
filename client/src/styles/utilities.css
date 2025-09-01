@@ -1,0 +1,58 @@
+/* Responsive */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .admin-section,
+  .customer-section {
+    padding: 1rem;
+  }
+
+  .appointments-table {
+    font-size: 0.9rem;
+  }
+
+  .appointments-table th,
+  .appointments-table td {
+    padding: 0.5rem;
+  }
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.error {
+  background-color: hsl(var(--destructive) / 0.1);
+  color: hsl(var(--destructive));
+  padding: 1rem;
+  border-radius: calc(var(--radius) - 2px);
+  margin: 1rem 0;
+  border: 1px solid hsl(var(--destructive) / 0.2);
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: calc(var(--radius) - 2px);
+  margin: 1rem 0;
+  border: 1px solid #c3e6cb;
+}
+
+/* Form spacing */
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Additional utility classes */
+.w-full { width: 100%; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.p-4 { padding: 1rem; }
+.rounded { border-radius: 0.25rem; }
+.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }

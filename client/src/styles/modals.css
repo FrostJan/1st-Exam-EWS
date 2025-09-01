@@ -1,0 +1,198 @@
+/* Status badges */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-completed {
+  background-color: #cce7ff;
+  color: #155724;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 520px;
+  border: 1px solid rgba(15,23,42,0.06);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.12);
+}
+
+/* Basic modal class for backward compatibility */
+.modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  margin-bottom: 12px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.btn-close {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #6b7280;
+}
+
+.btn-close:hover { background: rgba(15,23,42,0.04); color: #374151; }
+
+.modal-body {
+  margin-bottom: 12px;
+  color: #475569;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.modal-actions .btn {
+  min-width: 92px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Success variant for Appointment Booked modal */
+.modal-success .modal-content {
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  max-width: 520px; /* reduced to avoid excessive width */
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-top: 6px solid #10b981; /* green accent */
+}
+
+.modal-success .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+
+.modal-success .success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #10b981; /* emerald */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(16,185,129,0.14);
+  border: 3px solid rgba(16,185,129,0.12);
+}
+
+.modal-success .modal-header h2,
+.modal-success .modal-header .modal-title {
+  color: #10b981;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Keep the close button tucked at the top-right for this variant */
+.modal-success .btn-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+}
+
+.modal-success .modal-body {
+  margin-top: 6px;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.modal-success .modal-actions {
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.modal-success .modal-actions .btn {
+  min-width: 100px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #10b981;
+  color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(16,185,129,0.12);
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.modal-success .modal-actions .btn:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+  .modal-success .modal-content { max-width: calc(100% - 32px); padding: 1rem; }
+  .modal-success .success-icon { width: 48px; height: 48px; font-size: 20px; }
+  .modal-success .modal-actions .btn { min-width: 88px; padding: 8px 14px; }
+}
+

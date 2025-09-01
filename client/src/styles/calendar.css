@@ -1,0 +1,114 @@
+/* DateTimePicker specific styles */
+.max-sm\:flex-col { flex-direction: column; }
+.max-sm\:h-48 { height: 12rem; }
+.max-sm\:border-t { border-top-width: 1px; }
+.max-sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sm\:pe-5 { padding-inline-end: 1.25rem; }
+.sm\:w-40 { width: 10rem; }
+.sm\:border-s { border-inline-start-width: 1px; }
+
+@media (max-width: 640px) {
+  .max-sm\:flex-col { flex-direction: column; }
+  .max-sm\:h-48 { height: 12rem; }
+  .max-sm\:border-t { border-top-width: 1px; }
+  .max-sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* DateTimePicker and Calendar Dark Theme Enhancements */
+.date-time-picker {
+  background-color: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  color: hsl(var(--popover-foreground));
+}
+
+/* Calendar specific styling for dark theme */
+.rdp {
+  --rdp-cell-size: 2rem;
+  --rdp-accent-color: hsl(var(--primary));
+  --rdp-background-color: hsl(var(--popover));
+  --rdp-accent-color-dark: hsl(var(--primary));
+  --rdp-background-color-dark: hsl(var(--popover));
+}
+
+/* Calendar month navigation */
+.rdp-nav {
+  color: hsl(var(--foreground));
+}
+
+.rdp-nav_button {
+  color: hsl(var(--muted-foreground));
+}
+
+.rdp-nav_button:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--accent));
+}
+
+/* Calendar weekday headers */
+.rdp-head_cell {
+  color: hsl(var(--muted-foreground));
+  font-weight: 500;
+}
+
+/* Calendar day cells */
+.rdp-cell {
+  color: hsl(var(--foreground));
+}
+
+.rdp-button {
+  color: hsl(var(--foreground));
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.rdp-button:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+/* Selected date (today and selected) */
+.rdp-day_selected {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  font-weight: 500;
+}
+
+.rdp-day_today {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  font-weight: 500;
+}
+
+/* Disabled and outside dates */
+.rdp-day_outside {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.5;
+}
+
+.rdp-day_disabled {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.3;
+}
+
+/* Time slots styling */
+.time-slots {
+  background-color: hsl(var(--popover));
+  border-left: 1px solid hsl(var(--border));
+}
+
+.time-slot {
+  color: hsl(var(--foreground));
+  border-radius: calc(var(--radius) - 2px);
+  transition: all 0.2s ease;
+}
+
+.time-slot:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.time-slot.selected {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 500;
+}

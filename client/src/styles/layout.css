@@ -1,0 +1,35 @@
+/* Page Layout */
+.page-container {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+.admin-section,
+.customer-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+.admin-section {
+  background-color: hsl(var(--background));
+}
+
+.customer-section {
+  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.3) 100%);
+  position: relative;
+}
+
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+  font-weight: 400;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: hsl(var(--foreground));
+  font-weight: bold;
+}
